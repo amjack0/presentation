@@ -1,0 +1,81 @@
+\documentclass[compress,11pt]{beamer}
+
+% language and encodings
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{comment}
+\usepackage{media9}
+\usepackage{graphicx}
+\usepackage{multimedia}
+\usepackage{multirow}
+
+
+
+% TikZ
+\usepackage{tikz}
+\usetikzlibrary{mindmap,trees}
+\tikzset{every node/.append style={scale=0.6}}
+\usepackage{smartdiagram}
+
+\smartdiagramset{
+	planet size=3cm,
+	planet text width=2.5cm,
+	planet font=\footnotesize,
+	satellite size=2cm, 
+	satellite text width=2.5cm,
+	satellite font=\scriptsize,
+	distance planet-text=0,
+	%distance satellite-text=0,
+	distance planet-satellite=3.5cm,
+	/tikz/connection planet satellite/.append style={>-}
+}
+
+\tikzset{priority arrow/.append style={rotate=180,anchor=0,xshift=30,}}% reversing arrow
+
+% Beamer theme - options:
+% - navigationDotsLocation: specify location of the dots in the headline
+%   - near: display the dots near the section names (default)
+%   - below: display the dots below the section names
+% - titlePageSpacing: vertical spacing between items on title page (default: 1.5em)
+% - titlePageNumberOfAuthors: influence size and location of authors on title page
+%   - few (default): use larger font size, display authors on the left
+%   - many: use smaller font size, display authors on the right
+% - thanksPageBigGraphicsScale: scale for the big graphics on the thanks page (default: 1)
+% - titlePageUniversityLogo: location of university logo file on the title page
+%   (default: ../gfx/logos/logo_us_white)
+% - titlePageInstituteLogo: location of institute logo file on the title page
+%   (default: ../gfx/logos/logo_ipvs)
+% - titlePageDepartmentLogo: location of department logo file on the title page
+%   (default: ../gfx/logos/logo_sgs)
+% - titlePageBigLogo: location of big logo file on the title page
+%   (default: ../gfx/logos/logo_simtech)
+% - thanksPageBigGraphics: location of the big graphics on the thanks page
+%   (default: ../gfx/tikz/gfx_title)
+% - thanksPageInstituteLogo: location of institute logo file on the thanks page
+%   (default: ../gfx/logos/logo_ipvs)
+% - thanksPageDepartmentLogo: location of department logo file on the thanks page
+%   (default: ../gfx/logos/logo_sgs)
+% - thanksPageBigLogo: location of big logo file on the thanks page
+%   (default: ../gfx/logos/logo_simtech)
+\usetheme[
+    thanksPageBigGraphics=../gfx/thanks,
+    navigationDotsLocation=below,
+    titlePageSpacing=0.6em,
+    titlePageNumberOfAuthors=many,
+]{Stuttgart}
+
+% metadata
+\title{Dynamic Load Carrying Capacity of a Robot Manipulator}
+\subtitle{Metzingen, Germany}
+\author{Mujiburrehman Gouri}
+
+%\institute{Dipl.-Ing. Mavarick Ho \\ \vspace{0.2cm} \boldmath{ Hochschule Ravensburg-Weingarten} \\Prof. %Dr.-Ing. Lothar Berger \\Prof. Dr.-Ing. Raphael Ruf \\ \hspace{1.9cm}}
+
+\institute{Prof. Dr.-Ing. Lothar Berger \\Prof. Dr.-Ing. Raphael Ruf \\ \boldmath{ Hochschule Ravensburg-Weingarten}\\ \vspace{0.2cm} Dipl.-Ing. Mavarick Ho \\Neura Robotics GmbH}
+
+\date{\today}
+
+\begin{document}
+    \include{slides}
+\end{document}
